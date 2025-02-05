@@ -2,6 +2,8 @@
 import os
 import re
 import datetime
+import jieba
+import jieba.analyse
 from pathlib import Path
 
 def extract_title_from_content(content):
@@ -19,14 +21,84 @@ def extract_title_from_content(content):
     return None
 
 def extract_tags_from_content(content):
-    """从文件内容中提取标签"""
-    # 尝试匹配形如 "tags: tag1, tag2, tag3" 的行
-    tags_match = re.search(r'^tags:\s*(.+)$', content, re.MULTILINE)
+    """从文件内容中提取标签，优先使用已有标签，其次智能分析内容生成标签"""
+    # 首先尝试提取现有标签
+    existing_tags = extract_existing_tags(content)
+    if existing_tags:
+        return existing_tags
+    
+    # 如果没有现有标签，使用智能分析生成标签
+    return generate_smart_tags(content)
+
+def validate_tags(tags):
+    """验证标签格式是否正确"""
+    if not isinstance(tags, list):
+        return False
+    
+    for tag in tags:
+        # 检查标签类型
+        if not isinstance(tag, str):
+            return False
+        # 检查标签长度
+        if len(tag.strip()) < 2:
+            return False
+        # 检查标签格式（只允许中文、英文、数字和常用标点）
+        if not re.match(r'^[\u4e00-\u9fa5a-zA-Z0-9_\-\s]+$', tag.strip()):
+            return False
+    return True
+
+def extract_existing_tags(content):
+    """提取文件中已存在的标签"""
+    # 尝试从taxonomies中提取标签
+    taxonomies_match = re.search(r'\[taxonomies\][^\[]*tags\s*=\s*\[([^\]]+)\]', content, re.DOTALL)
+    if taxonomies_match:
+        # 提取标签并清理格式
+        tags_str = taxonomies_match.group(1)
+        tags = re.findall(r'"([^"]+)"', tags_str)
+        tags = [tag.strip() for tag in tags if tag.strip()]
+        return tags if validate_tags(tags) else ["未分类"]
+    
+    # 尝试匹配直接的tags定义
+    tags_match = re.search(r'^tags\s*=\s*\[([^\]]+)\]', content, re.MULTILINE)
     if tags_match:
-        # 分割标签并去除空格
-        tags = [tag.strip() for tag in tags_match.group(1).split(',')]
-        return [tag for tag in tags if tag]  # 过滤空标签
-    return []
+        tags_str = tags_match.group(1)
+        tags = re.findall(r'"([^"]+)"', tags_str)
+        tags = [tag.strip() for tag in tags if tag.strip()]
+        return tags if validate_tags(tags) else ["未分类"]
+    
+    # 尝试匹配老格式 "tags: tag1, tag2, tag3"
+    old_tags_match = re.search(r'^tags:\s*(.+)$', content, re.MULTILINE)
+    if old_tags_match:
+        tags = [tag.strip() for tag in old_tags_match.group(1).split(',')]
+        tags = [tag for tag in tags if tag]
+        return tags if validate_tags(tags) else ["未分类"]
+    
+    return ["未分类"]
+
+def generate_smart_tags(content):
+    """智能分析文章内容生成标签"""
+    # 移除元数据部分
+    if has_frontmatter(content):
+        content = re.sub(r'\+\+\+[^+]*\+\+\+\n+', '', content, flags=re.DOTALL)
+    
+    # 移除Markdown语法
+    content = re.sub(r'#.*?\n', '', content)  # 移除标题
+    content = re.sub(r'\[.*?\]\(.*?\)', '', content)  # 移除链接
+    content = re.sub(r'`.*?`', '', content)  # 移除代码
+    content = re.sub(r'\*\*.*?\*\*', '', content)  # 移除加粗
+    content = re.sub(r'\*.*?\*', '', content)  # 移除斜体
+    
+    # 使用jieba提取关键词
+    tags = jieba.analyse.extract_tags(content, topK=5, withWeight=False)
+    
+    # 过滤太短的标签
+    tags = [tag for tag in tags if len(tag) >= 2]
+    
+    # 如果没有提取到有效标签，返回默认标签
+    if not tags:
+        return ["未分类"]
+    
+    return tags
 
 def has_frontmatter(content):
     """检查文件是否已经包含元数据头"""
@@ -50,6 +122,8 @@ def create_frontmatter(title, tags=None, date=None):
 title = \"{title}\"
 date = {date}
 description = \"{title}的详细说明\"
+
+[taxonomies]
 tags = {tags_str}
 +++
 
@@ -92,9 +166,8 @@ def add_metadata_to_file(file_path):
     except Exception as e:
         print(f"处理文件 {file_path} 时出错: {str(e)}")
 
-
 def process_directory(directory):
-    """处理目录下的所有Markdown文件"""
+    """处理目录下的所有Markdown文件，排除README.md和_index.md"""
     directory = Path(directory)
     if not directory.exists():
         print(f"错误: 目录 {directory} 不存在")
@@ -102,6 +175,10 @@ def process_directory(directory):
     
     for file_path in directory.glob('*.md'):
         if file_path.is_file():
+            # 排除README.md和_index.md文件
+            if file_path.name.lower() in ['readme.md', '_index.md']:
+                print(f"跳过 {file_path}: 系统文件")
+                continue
             add_metadata_to_file(str(file_path))
 
 def main():

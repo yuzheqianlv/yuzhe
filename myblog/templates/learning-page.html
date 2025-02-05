@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="learning-container">
+    <article class="learning-post">
+        <header class="learning-post-header">
+            <h1 class="learning-post-title">{{ page.title }}</h1>
+            {% if page.taxonomies and page.taxonomies.tags %}
+            <div class="learning-post-meta">
+                {% if page.date %}
+                <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                {% endif %}
+                <div class="learning-post-tags">
+                    {% for tag in page.taxonomies.tags %}
+                    <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="learning-tag">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </header>
+        <div class="learning-post-content line-numbers">
+            {{ page.content | safe }}
+        </div>
+    </article>
+</div>
+{% endblock content %}
