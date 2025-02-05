@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://yourdomain.com/sitemap.xml
-
-# 禁止访问管理页面
-Disallow: /admin/ 

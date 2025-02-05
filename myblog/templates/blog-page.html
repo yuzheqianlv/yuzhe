@@ -49,6 +49,46 @@
     padding: 2rem;
 }
 
+/* 代码块样式 */
+.post-content pre {
+    background-color: var(--code-bg);
+    border-radius: 6px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    position: relative;
+}
+
+.post-content pre code {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 代码行号样式 */
+.post-content pre code > span {
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+}
+
+.post-content pre code > span::before {
+    content: attr(data-line);
+    position: absolute;
+    left: -3rem;
+    width: 2rem;
+    text-align: right;
+    color: var(--text-light);
+    opacity: 0.5;
+    user-select: none;
+}
+
+/* 代码高亮主题变量 */
+:root {
+    --code-bg: #2b303b;
+    --text-light: #c0c5ce;
+}
+
 .blog-content {
     flex: 1;
     min-width: 0;
@@ -110,8 +150,7 @@
 
 /* 文章内容样式 */
 .post-content {
-    padding: 0 2rem 2rem;
-    color: var(--text-color);
+    margin-top: 2rem;
     line-height: 1.8;
 }
 
@@ -428,4 +467,4 @@
     "url": "{{ current_url | safe }}"
 }
 </script>
-{% endblock content %} 
+{% endblock content %}
