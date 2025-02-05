@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -49,6 +49,7 @@
     
     <!-- Links -->
     <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='code.css') | safe }}">
     <link rel="canonical" href="{{ current_url | safe }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ get_url(path='rss.xml') | safe }}">
     
@@ -56,6 +57,20 @@
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    
+    <!-- 预加载主题样式 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentHour = new Date().getHours();
+            const isDarkTime = currentHour >= 22 || currentHour < 6;
+            
+            document.documentElement.setAttribute('data-theme', 
+                savedTheme || (isDarkTime ? 'dark' : (prefersDark ? 'dark' : 'light'))
+            );
+        })();
+    </script>
     
     <!-- 添加侧边栏按钮图标 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
@@ -73,6 +88,7 @@
             --shadow-color: rgba(0, 0, 0, 0.1);
             --code-bg: #f6f8fa;
             --code-color: #476582;
+            --code-quote-color: #5ccb91;
         }
         
         [data-theme="dark"] {
@@ -87,6 +103,7 @@
             --shadow-color: rgba(0, 0, 0, 0.3);
             --code-bg: #2d2d2d;
             --code-color: #e2e8f0;
+            --code-quote-color: #5ccb91;
         }
         
         /* 主题切换按钮样式 */
@@ -227,6 +244,16 @@
             transform: translateX(4px);
         }
         
+        /* 行内代码块样式 */
+        code:not([class]) {
+            color: var(--code-quote-color);
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
         /* 主内容区域样式 */
         .content {
             flex: 1;
@@ -394,5 +421,6 @@
         // 初始化主题管理
         document.addEventListener('DOMContentLoaded', () => themeManager.init());
     </script>
+    <script src="/js/code-copy.js"></script>
 </body>
 </html>

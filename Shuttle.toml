@@ -14,5 +14,4 @@ pre_build = [
 ]
 
 [secrets]
-API_KEY = "" # 添加一个空的 API_KEY 配置
-DATABASE_URL = "" # 添加一个空的 DATABASE_URL 配置
+# 添加空的 secrets 配置块来避免 Secret Loading 错误

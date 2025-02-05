@@ -1,13 +1,13 @@
 +++
 title = "友链"
-path = "friends"
+date = 2025-02-05
+description = "友链的详细说明"
+tags = ["友链", "friends", "name"]
 template = "friends.html"
 
 [extra]
 friends = [
-    { name = "示例博客", avatar = "/images/avatar-1.jpg", description = "一个充满创意的技术博客" },
-    { name = "编程笔记", avatar = "/images/avatar-2.jpg", description = "分享编程经验和学习心得" },
-    { name = "设计空间", avatar = "/images/avatar-3.jpg", description = "探索设计与技术的完美结合" }
+    { name = "示例友链", avatar = "/images/avatar.png", description = "这是一个示例友链描述" }
 ]
 +++
 

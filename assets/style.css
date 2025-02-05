@@ -445,6 +445,8 @@ footer a:hover {
     --mask-color: rgba(0, 0, 0, 0.4);
     --shadow-color: rgba(0, 0, 0, 0.2);
     --blur-size: 10px;
+    --code-bg: rgba(0, 0, 0, 0.7);
+    --code-color: #e0e0e0;
 }
 
 /* 深色主题变量 */
@@ -459,6 +461,8 @@ footer a:hover {
     --mask-color: rgba(0, 0, 0, 0.6);
     --shadow-color: rgba(0, 0, 0, 0.4);
     --blur-size: 15px;
+    --code-bg: rgba(0, 0, 0, 0.8);
+    --code-color: #e0e0e0;
 }
 
 /* 主题切换按钮样式 */
@@ -654,4 +658,33 @@ a:not(.project-card):not(.social-links a):hover::after {
         rgba(255, 255, 255, 0.1),
         transparent
     );
+}
+
+/* 代码块样式 */
+pre {
+    background-color: var(--code-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    color: var(--code-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+pre code {
+    display: block;
+    padding: 0;
+    background: none;
+}
+
+:not(pre) > code {
+    background: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
 }

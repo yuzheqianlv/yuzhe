@@ -1,9 +1,8 @@
 +++
 title = "首页"
-template = "index.html"
-page_template = "blog-page.html"
+description = "首页的详细说明"
 +++
 
 欢迎来到千虑者的博客！
 
-这是一个专注于技术分享和学习记录的个人博客。 
+这是一个专注于技术分享和学习记录的个人博客。
