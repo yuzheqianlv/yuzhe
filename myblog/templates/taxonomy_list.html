@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}标签 - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="taxonomy-container">
+    <h1 class="taxonomy-title">标签</h1>
+    <div class="tag-cloud">
+        {% for term in terms %}
+        <a href="{{ term.permalink }}" class="tag-item" 
+           style="--tag-size: {{ term.pages | length }}">
+            {{ term.name }}
+            <span class="tag-count">{{ term.pages | length }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+.taxonomy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.taxonomy-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tag-item {
+    --min-size: 0.875rem;
+    --max-size: 1.5rem;
+    --size-factor: calc((var(--tag-size) - 1) * 0.15);
+    
+    font-size: clamp(var(--min-size), 
+                    calc(var(--min-size) + var(--size-factor)), 
+                    var(--max-size));
+    padding: 0.5em 1em;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.tag-item:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.tag-count {
+    font-size: 0.875em;
+    opacity: 0.7;
+    margin-left: 0.5em;
+}
+</style>
+{% endblock content %} 

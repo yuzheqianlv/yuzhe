@@ -1,0 +1,18 @@
+[build]
+assets = [
+    "myblog",
+    "assets",
+]
+
+[build.shuttle]
+timeout = 300  # 设置构建超时时间为 300 秒
+pre_build = [
+    "rm -rf myblog/public",  # 首先清理旧的构建文件
+    "curl -sL https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz | tar xz",
+    "chmod +x zola",
+    "cd myblog && ../zola build --base-url /myblog",
+]
+
+[secrets]
+API_KEY = "" # 添加一个空的 API_KEY 配置
+DATABASE_URL = "" # 添加一个空的 DATABASE_URL 配置

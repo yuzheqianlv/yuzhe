@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}搜索 - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="search-container">
+    <div class="search-header">
+        <h1 class="search-title">站内搜索</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="输入关键词搜索..." autocomplete="off">
+            <button id="search-button">搜索</button>
+        </div>
+    </div>
+    <div id="search-results" class="search-results"></div>
+</div>
+
+<style>
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.search-header {
+    margin-bottom: 2rem;
+}
+
+.search-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+#search-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#search-button:hover {
+    background: var(--primary-dark-color);
+}
+
+.search-results {
+    margin-top: 2rem;
+}
+
+.search-result {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.search-result:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.search-result h3 {
+    margin: 0 0 0.5rem;
+}
+
+.search-result h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.search-result h3 a:hover {
+    color: var(--primary-color);
+}
+
+.search-result p {
+    margin: 0;
+    color: var(--secondary-color);
+    font-size: 0.925rem;
+    line-height: 1.6;
+}
+
+.search-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--secondary-color);
+}
+
+.search-error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--error-color);
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        padding: 1rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    #search-button {
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const resultsContainer = document.getElementById('search-results');
+
+// 防抖函数
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+// 执行搜索
+async function performSearch() {
+    const query = searchInput.value.trim();
+    if (!query) {
+        resultsContainer.innerHTML = '';
+        return;
+    }
+
+    resultsContainer.innerHTML = '<div class="search-loading">搜索中...</div>';
+
+    try {
+        const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        if (!response.ok) throw new Error('搜索请求失败');
+        
+        const results = await response.json();
+        displayResults(results);
+    } catch (error) {
+        resultsContainer.innerHTML = `
+            <div class="search-error">
+                搜索出错: ${error.message}
+            </div>
+        `;
+    }
+}
+
+// 显示搜索结果
+function displayResults(results) {
+    if (!results || results.length === 0) {
+        resultsContainer.innerHTML = '<div class="search-empty">未找到相关内容</div>';
+        return;
+    }
+
+    const html = results.map(result => `
+        <article class="search-result">
+            <h3><a href="${result.path}">${result.title}</a></h3>
+            <p>${result.excerpt}</p>
+            ${result.tags ? `
+                <div class="tags">
+                    ${result.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+            ` : ''}
+        </article>
+    `).join('');
+
+    resultsContainer.innerHTML = html;
+}
+
+// 事件监听
+searchButton.addEventListener('click', performSearch);
+searchInput.addEventListener('keyup', event => {
+    if (event.key === 'Enter') {
+        performSearch();
+    }
+});
+
+// 添加输入防抖
+searchInput.addEventListener('input', debounce(performSearch, 300));
+</script>
+{% endblock content %} 

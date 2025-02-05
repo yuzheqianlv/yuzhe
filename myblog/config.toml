@@ -1,0 +1,64 @@
+base_url = "/myblog"  # 修改为新的子路径
+title = "千虑者"
+description = "(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)"
+default_language = "zh"
+
+# 确保输出目录配置正确
+output_dir = "public"
+
+# 标签分类配置
+taxonomies = [
+    {name = "tags", feed = true, rss = true}
+]
+
+[markdown]
+# 启用语法高亮
+highlight_code = true
+# 启用表格支持
+render_emoji = true
+# 启用脚注
+external_links_target_blank = true
+# 启用智能标点
+smart_punctuation = true
+
+[extra]
+author = "千虑者"
+subtitle = "个人博客"
+keywords = "博客,技术,编程,生活,Rust,Zola"
+description = "(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)"
+
+# SEO 相关配置
+[extra.seo]
+google_site_verification = ""  # Google Search Console 验证码
+baidu_site_verification = ""   # 百度站长验证码
+bing_site_verification = ""    # Bing Webmaster 验证码
+
+# 站点地图配置
+generate_sitemap = true
+sitemap_filename = "sitemap.xml"
+
+# 添加自定义配置
+enable_line_numbers = true
+
+# 确保这些配置存在
+compile_sass = true
+build_search_index = true
+generate_feed = true
+hard_link_static = false  # 添加这行，避免静态文件链接问题
+
+# 确保模板正确加载
+template_extensions = ["html"]
+ignored_content = []
+
+# 移除主题配置，除非您确实使用了特定主题
+# theme = "your-theme-name"
+
+[link_checker]
+skip_prefixes = [
+    "http://localhost",
+]
+
+[search]
+include_title = true
+include_description = true
+include_content = true 

@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}文章 - {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="blog-container">
+    <h1 class="page-title">最新文章</h1>
+    <div class="post-list">
+        {% if paginator %}
+            {% for page in paginator.pages %}
+            <article class="post-item">
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="{{ page.permalink }}">{{ page.title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+                        {% if page.taxonomies.tags %}
+                        <div class="post-tags">
+                            {% for tag in page.taxonomies.tags %}
+                            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </header>
+                {% if page.description %}
+                <div class="post-description">
+                    {{ page.description }}
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+
+            {% if paginator.previous or paginator.next %}
+            <nav class="pagination">
+                {% if paginator.previous %}
+                <a href="{{ paginator.previous }}" class="prev">上一页</a>
+                {% endif %}
+                <span class="page-number">{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+                {% if paginator.next %}
+                <a href="{{ paginator.next }}" class="next">下一页</a>
+                {% endif %}
+            </nav>
+            {% endif %}
+        {% else %}
+            {% for page in section.pages %}
+            <article class="post-item">
+                <header class="post-header">
+                    <h2 class="post-title">
+                        <a href="{{ page.permalink }}">{{ page.title }}</a>
+                    </h2>
+                    <div class="post-meta">
+                        <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+                        {% if page.taxonomies.tags %}
+                        <div class="post-tags">
+                            {% for tag in page.taxonomies.tags %}
+                            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}" class="tag">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </header>
+                {% if page.description %}
+                <div class="post-description">
+                    {{ page.description }}
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-item {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.post-title {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+}
+
+.post-title a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: var(--hover-color);
+    border-color: var(--secondary-color);
+}
+
+.post-description {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-size: 0.925rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    
+    .post-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* 添加分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.pagination a {
+    padding: 0.5rem 1rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.pagination a:hover {
+    background: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.page-number {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+</style>
+{% endblock content %} 

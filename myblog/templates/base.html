@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}{{ config.title }}{% endblock %} - {{ config.extra.subtitle }}</title>
+    <meta name="author" content="{{ config.extra.author }}">
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{{ config.extra.keywords }}{% endblock %}">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico') | safe }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path='favicon.ico') | safe }}">
+    
+    <!-- Mobile Meta -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ current_url | safe }}">
+    <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
+    <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
+    <meta property="og:image" content="{{ get_url(path='shaonv.jpeg') | safe }}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ current_url | safe }}">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
+    <meta name="twitter:image" content="{{ get_url(path='shaonv.jpeg') | safe }}">
+    
+    <!-- Verification -->
+    {% if config.extra.seo.google_site_verification %}
+    <meta name="google-site-verification" content="{{ config.extra.seo.google_site_verification }}">
+    {% endif %}
+    {% if config.extra.seo.baidu_site_verification %}
+    <meta name="baidu-site-verification" content="{{ config.extra.seo.baidu_site_verification }}">
+    {% endif %}
+    {% if config.extra.seo.bing_site_verification %}
+    <meta name="msvalidate.01" content="{{ config.extra.seo.bing_site_verification }}">
+    {% endif %}
+    
+    <!-- Links -->
+    <link rel="stylesheet" href="{{ get_url(path='style.css') | safe }}">
+    <link rel="canonical" href="{{ current_url | safe }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ get_url(path='rss.xml') | safe }}">
+    
+    <!-- Theme Support -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    
+    <!-- 添加侧边栏按钮图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --title-color: #1a1a1a;
+            --border-color: #eaeaea;
+            --link-color: #42b983;
+            --primary-color: #42b983;
+            --secondary-color: #718096;
+            --hover-color: rgba(66, 185, 131, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f6f8fa;
+            --code-color: #476582;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --title-color: #ffffff;
+            --border-color: #333333;
+            --link-color: #5ccb91;
+            --primary-color: #5ccb91;
+            --secondary-color: #a0aec0;
+            --hover-color: rgba(92, 203, 145, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --code-bg: #2d2d2d;
+            --code-color: #e2e8f0;
+        }
+        
+        /* 主题切换按钮样式 */
+        .theme-toggle {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        
+        /* 添加平滑过渡 */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* 容器样式 */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 侧边栏样式 */
+        .sidebar {
+            position: fixed;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-color);
+            border-right: 1px solid var(--border-color);
+            padding: 2rem;
+            overflow-y: auto;
+            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            
+            /* 添加弹性布局实现居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 调整内容容器样式 */
+        .sidebar-content {
+            width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            /* 添加弹性布局 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .sidebar-content::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 调整 profile 样式 */
+        .profile {
+            text-align: center;
+            width: 100%;
+            margin: 0; /* 移除底部边距 */
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--border-color);
+            background: var(--bg-color);
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 70% center;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .avatar:hover img {
+            transform: scale(1.15);
+        }
+        
+        .site-title {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .site-description {
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* 导航样式 */
+        .nav {
+            width: 100%;
+        }
+        
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .nav a:hover {
+            background: var(--hover-color);
+            transform: translateX(4px);
+        }
+        
+        /* 主内容区域样式 */
+        .content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+    {% if config.extra.theme.auto_dark %}
+    <script>
+        // 检查系统暗色模式
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        // 检查时间范围
+        const now = new Date();
+        const hour = now.getHours();
+        const darkModeStart = {{ config.extra.theme.dark_mode_time.start }};
+        const darkModeEnd = {{ config.extra.theme.dark_mode_time.end }};
+        
+        if (hour >= darkModeStart || hour < darkModeEnd) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    {% endif %}
+</head>
+<body>
+    <!-- 添加移动端侧边栏切换按钮 -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="切换侧边栏">
+        <i class="ri-menu-line"></i>
+    </button>
+
+    <!-- 添加遮罩层 -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="profile">
+                    <div class="avatar">
+                        <img src="{{ get_url(path='shaonv.jpeg') | safe }}" alt="{{ config.title }}">
+                    </div>
+                    <h1 class="site-title">{{ config.title }}</h1>
+                    <p class="site-description">{{ config.description }}</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="{{ config.base_url }}/">首页</a></li>
+                        <li><a href="{{ config.base_url }}/blog/">文章</a></li>
+                        <li><a href="{{ config.base_url }}/gallery/">图库</a></li>
+                        <li><a href="{{ config.base_url }}/tags/">标签</a></li>
+                        <li><a href="{{ config.base_url }}/about/">关于</a></li>
+                        <li><a href="{{ config.base_url }}/friends/">友链</a></li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="openSearch()">搜索</a>
+                        </li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                                <span class="theme-toggle-icon">🌓</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- 搜索对话框 -->
+    <div id="search-dialog" class="search-dialog">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="search-input" placeholder="输入关键词搜索...">
+                <button onclick="performSearch()">搜索</button>
+                <button onclick="closeSearch()">关闭</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- 脚本放在 body 末尾 -->
+    <script src="{{ get_url(path='js/search.js') | safe }}"></script>
+    <script src="{{ get_url(path='js/script.js') | safe }}"></script>
+    <script>
+        // 主题管理
+        const themeManager = {
+            // 获取系统主题偏好
+            getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            },
+
+            // 获取当前时间是否在夜间模式范围内
+            isNightTime() {
+                const hour = new Date().getHours();
+                const startHour = {% if config.extra.theme.dark_mode_time %}{{ config.extra.theme.dark_mode_time.start | default(value=22) }}{% else %}22{% endif %};
+                const endHour = {% if config.extra.theme.dark_mode_time %}{{ config.extra.theme.dark_mode_time.end | default(value=6) }}{% else %}6{% endif %};
+                return hour >= startHour || hour < endHour;
+            },
+
+            // 获取存储的主题
+            getSavedTheme() {
+                return localStorage.getItem('theme');
+            },
+
+            // 设置主题
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                this.updateThemeIcon(theme);
+            },
+
+            // 更新主题图标
+            updateThemeIcon(theme) {
+                const icon = document.querySelector('.theme-toggle-icon');
+                icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+            },
+
+            // 初始化主题
+            init() {
+                const savedTheme = this.getSavedTheme();
+                const systemTheme = this.getSystemTheme();
+                const shouldUseDark = {% if config.extra.theme %}{{ config.extra.theme.auto_dark | default(value=true) }}{% else %}true{% endif %} && this.isNightTime();
+                
+                const theme = savedTheme || (shouldUseDark ? 'dark' : systemTheme);
+                this.setTheme(theme);
+
+                // 监听系统主题变化
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    if (!this.getSavedTheme()) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+
+                // 监听主题切换按钮点击
+                document.getElementById('theme-toggle').addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    this.setTheme(newTheme);
+                });
+            }
+        };
+
+        // 初始化主题管理
+        document.addEventListener('DOMContentLoaded', () => themeManager.init());
+    </script>
+</body>
+</html>

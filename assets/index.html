@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>千虑者的个人空间</title>
+        <!-- 修改网站图标路径 -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <!-- 添加字体图标 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+        <script>
+            // 在页面加载前初始化主题，避免闪烁
+            (function() {
+                const theme = localStorage.getItem('theme') || 
+                             (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
+        <style>
+            /* 打字动画相关样式 */
+            .typing-text {
+                display: inline-block;
+                position: relative;
+                color: var(--primary-color);
+            }
+
+            .typing-text::after {
+                content: '|';
+                position: absolute;
+                right: -8px;
+                animation: cursor-blink 0.8s infinite;
+            }
+
+            @keyframes cursor-blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="profile">
+                    <div class="avatar">
+                        <img src="shaonv.jpeg" alt="千虑者">
+                    </div>
+                    <h1>千虑者的个人空间</h1>
+                    <p class="motto">
+                        <span class="typing-text" data-text="智者千虑必有一失，愚者千虑必有一得"></span>
+                    </p>
+                </div>
+                <div class="theme-switch">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                        <span class="theme-toggle-icon">
+                            <i class="ri-sun-line light-icon"></i>
+                            <i class="ri-moon-line dark-icon"></i>
+                        </span>
+                    </button>
+                </div>
+            </header>
+
+            <main>
+                <section class="projects">
+                    <h2>项目展示</h2>
+                    <div class="project-grid">
+                        <!-- 博客项目 -->
+                        <a href="/myblog/" class="project-card">
+                            <div class="project-icon">
+                                <i class="ri-book-2-line"></i>
+                            </div>
+                            <h3>个人博客</h3>
+                            <p>技术分享和学习记录的个人博客</p>
+                            <div class="tech-stack">
+                                <span>Rust</span>
+                                <span>Zola</span>
+                                <span>Shuttle</span>
+                            </div>
+                        </a>
+
+                        <!-- AI 助手项目（开发中） -->
+                        <div class="project-card coming-soon">
+                            <div class="project-icon">
+                                <i class="ri-robot-line"></i>
+                            </div>
+                            <h3>AI 助手</h3>
+                            <p>基于大语言模型的智能助手</p>
+                            <div class="tech-stack">
+                                <span>Rust</span>
+                                <span>LLM</span>
+                                <span>WebAssembly</span>
+                            </div>
+                            <div class="status">开发中</div>
+                        </div>
+
+                        <!-- 在线工具集（规划中） -->
+                        <div class="project-card coming-soon">
+                            <div class="project-icon">
+                                <i class="ri-tools-line"></i>
+                            </div>
+                            <h3>在线工具集</h3>
+                            <p>实用的在线开发工具合集</p>
+                            <div class="tech-stack">
+                                <span>Rust</span>
+                                <span>WebAssembly</span>
+                                <span>React</span>
+                            </div>
+                            <div class="status">规划中</div>
+                        </div>
+
+                        <!-- API 服务（规划中） -->
+                        <div class="project-card coming-soon">
+                            <div class="project-icon">
+                                <i class="ri-cloud-line"></i>
+                            </div>
+                            <h3>API 服务</h3>
+                            <p>提供各种实用的 API 服务</p>
+                            <div class="tech-stack">
+                                <span>Rust</span>
+                                <span>Axum</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="status">规划中</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about">
+                    <h2>关于我</h2>
+                    <div class="about-content">
+                        <p>我是一名热爱技术的开发者，专注于 Rust 语言和 Web 开发。通过这个平台，我希望能够：</p>
+                        <ul>
+                            <li>分享技术经验和学习心得</li>
+                            <li>开发实用的工具和服务</li>
+                            <li>探索新技术的应用场景</li>
+                            <li>结识志同道合的朋友</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="contact">
+                    <h2>联系方式</h2>
+                    <div class="social-links">
+                        <a href="https://github.com/yuzheqianlv" target="_blank" rel="noopener">
+                            <i class="ri-github-line"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:yuzheqianlv@protonmail.com">
+                            <i class="ri-mail-line"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                <p>© 2025 千虑者. 基于 Rust 和 Shuttle 构建.</p>
+            </footer>
+        </div>
+        <script>
+            class TypeWriter {
+                constructor(element, text, options = {}) {
+                    this.element = element;
+                    this.text = text;
+                    this.loopDelay = options.loopDelay || 2000;
+                    this.typeDelay = options.typeDelay || 100;
+                    this.deleteDelay = options.deleteDelay || 50;
+                    this.loop = options.loop !== undefined ? options.loop : true;
+                    
+                    this.currentText = '';
+                    this.isDeleting = false;
+                    this.timeout = null;
+                }
+
+                type() {
+                    // 计算当前应该显示的文本长度
+                    const fullText = this.text;
+                    const currentLength = this.currentText.length;
+
+                    if (this.isDeleting) {
+                        // 删除文字
+                        this.currentText = fullText.substring(0, currentLength - 1);
+                    } else {
+                        // 添加文字
+                        this.currentText = fullText.substring(0, currentLength + 1);
+                    }
+
+                    // 更新显示的文本
+                    this.element.textContent = this.currentText;
+
+                    // 计算打字速度
+                    let typeSpeed = this.isDeleting ? this.deleteDelay : this.typeDelay;
+
+                    // 处理动画循环逻辑
+                    if (!this.isDeleting && this.currentText === fullText) {
+                        // 完成打字，等待一段时间后开始删除
+                        typeSpeed = this.loopDelay;
+                        if (this.loop) {
+                            this.isDeleting = true;
+                        }
+                    } else if (this.isDeleting && this.currentText === '') {
+                        // 完成删除，重新开始打字
+                        this.isDeleting = false;
+                        typeSpeed = 500;
+                    }
+
+                    // 设置下一次更新
+                    clearTimeout(this.timeout);
+                    this.timeout = setTimeout(() => this.type(), typeSpeed);
+                }
+
+                start() {
+                    this.type();
+                }
+
+                stop() {
+                    clearTimeout(this.timeout);
+                }
+            }
+
+            // 页面加载完成后初始化打字效果
+            document.addEventListener('DOMContentLoaded', () => {
+                const typingElement = document.querySelector('.typing-text');
+                const text = typingElement.getAttribute('data-text');
+                
+                const typeWriter = new TypeWriter(typingElement, text, {
+                    loopDelay: 3000,    // 完成后等待3秒
+                    typeDelay: 150,     // 打字速度
+                    deleteDelay: 50,    // 删除速度
+                    loop: true          // 循环播放
+                });
+                
+                typeWriter.start();
+            });
+        </script>
+        <script src="/script.js"></script>
+    </body>
+</html>
