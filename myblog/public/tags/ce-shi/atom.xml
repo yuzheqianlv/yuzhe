@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>千虑者 - 测试</title>
+    <subtitle>(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)</subtitle>
+    <link rel="self" type="application/atom+xml" href="/myblog/tags/ce-shi/atom.xml"/>
+    <link rel="alternate" type="text/html" href="/myblog"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-02T00:00:00+00:00</updated>
+    <id>/myblog/tags/ce-shi/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>测试代码块高度限制</title>
+        <published>2024-01-02T00:00:00+00:00</published>
+        <updated>2024-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/myblog/blog/test-anchor/test-height-limit/"/>
+        <id>/myblog/blog/test-anchor/test-height-limit/</id>
+        
+        <content type="html" xml:base="/myblog/blog/test-anchor/test-height-limit/">&lt;h1 id=&quot;ce-shi-dai-ma-kuai-gao-du-xian-zhi&quot;&gt;测试代码块高度限制&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;duan-dai-ma-kuai-ce-shi&quot;&gt;短代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个只有3行的短代码块：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;short_function&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;这是一个短函数&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;zhong-deng-chang-du-dai-ma-kuai-ce-shi&quot;&gt;中等长度代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个6行的中等长度代码块：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;medium_function&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 这是一个中等长度的函数
+&lt;&#x2F;span&gt;&lt;span&gt;    result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span&gt;i
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;chang-dai-ma-kuai-ce-shi&quot;&gt;长代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个超过10行的长代码块，用于测试滚动条效果：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;LongExample&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__init__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;add_item&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;item&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 添加一个新项目到列表
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data.append(item)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(self.data)
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;process_items&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 处理所有项目
+&lt;&#x2F;span&gt;&lt;span&gt;        result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 对每个项目进行处理
+&lt;&#x2F;span&gt;&lt;span&gt;            processed &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;item.upper() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;isinstance&lt;&#x2F;span&gt;&lt;span&gt;(item, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;(item)
+&lt;&#x2F;span&gt;&lt;span&gt;            result.append(processed)
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;clear_all&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 清空所有数据
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;已清空所有数据&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;chao-chang-dai-ma-kuai-ce-shi&quot;&gt;超长代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个非常长的代码块，包含详细的注释和多个方法：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;ComplexExample&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;这是一个复杂的示例类，用于测试代码块的滚动效果&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__init__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;初始化方法&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;name
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{}
+&lt;&#x2F;span&gt;&lt;span&gt;        self.history &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;add_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;添加数据到字典中&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 如果键已存在，保存旧值到历史记录
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;update&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;old_value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: self.data[key],
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;new_value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: value
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 如果是新键，记录添加操作
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;add&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: value
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 更新数据
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data[key] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;value
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;get_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;获取数据&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;raise &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;KeyError&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;键 &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;{key}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39; 不存在&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;remove_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;删除数据&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 记录删除操作
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;delete&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;del &lt;&#x2F;span&gt;&lt;span&gt;self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;get_history&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;获取操作历史&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.history
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;clear_history&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;清空历史记录&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.history &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;历史记录已清空&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__str__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;字符串表示&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ComplexExample(name=&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;{self.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;, data_count=&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(self.data)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;)&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;bu-tong-yu-yan-de-dai-ma-kuai-ce-shi&quot;&gt;不同语言的代码块测试&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;javascriptdai-ma-kuai&quot;&gt;JavaScript代码块&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span&gt;SimpleCalculator {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;constructor&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span&gt;number;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;subtract&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span&gt;number;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;getResult&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this.result;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;htmldai-ma-kuai&quot;&gt;HTML代码块&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;DOCTYPE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;zh&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;charset&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;测试页面&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;style&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;.container &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;padding&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;20&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;margin&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;border&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;solid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;#ccc&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;style&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;container&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;测试标题&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;这是一个测试段落&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>测试代码块高度限制</title>
+        <published>2024-01-02T00:00:00+00:00</published>
+        <updated>2024-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/myblog/blog/test-height-limit/"/>
+        <id>/myblog/blog/test-height-limit/</id>
+        
+        <content type="html" xml:base="/myblog/blog/test-height-limit/">&lt;h1 id=&quot;ce-shi-dai-ma-kuai-gao-du-xian-zhi&quot;&gt;测试代码块高度限制&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;duan-dai-ma-kuai-ce-shi&quot;&gt;短代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个只有3行的短代码块：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;short_function&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;这是一个短函数&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;zhong-deng-chang-du-dai-ma-kuai-ce-shi&quot;&gt;中等长度代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个6行的中等长度代码块：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;medium_function&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 这是一个中等长度的函数
+&lt;&#x2F;span&gt;&lt;span&gt;    result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span&gt;i
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;result
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;chang-dai-ma-kuai-ce-shi&quot;&gt;长代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个超过10行的长代码块，用于测试滚动条效果：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;axum::{Json, http::StatusCode};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;regex::RegexBuilder;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;serde::{Deserialize, Serialize};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;std::{fs, collections::HashMap};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;walkdir::WalkDir;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;#[derive(Deserialize)]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;SearchRequest {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;query: String,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;case_sensitive: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;whole_word: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;bool&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;max_results: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 添加最大结果数限制
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;#[derive(Serialize, Clone)]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;SearchResult {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;path: String,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;content: String,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;line_number: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;context_before: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;context_after: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;score: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 改为必需字段
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;highlights: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;)&amp;gt;,  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 改为必需字段
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span&gt;metadata: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;HashMap&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 添加元数据支持
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 计算相关性分数
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;calculate_score&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;query&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;matches&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f32 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; content_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; content.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; query_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; query.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f32&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; match_ratio &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; matches &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f32 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt; content_len;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; TF-IDF 启发式计算
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; tf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; match_ratio &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1.0 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;(content_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;100.0&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;ln&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; idf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1.0 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;(query_len &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt; content_len).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;ln&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    tf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt; idf
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;pub&lt;&#x2F;span&gt;&lt;span&gt; async &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;(Json(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;req&lt;&#x2F;span&gt;&lt;span&gt;): Json&amp;lt;SearchRequest&amp;gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Result&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;Json&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;SearchResult&amp;gt;&amp;gt;, StatusCode&amp;gt; {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; case_sensitive &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; req.case_sensitive.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;unwrap_or&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; max_results &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; req.max_results.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;unwrap_or&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;100&lt;&#x2F;span&gt;&lt;span&gt;); &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 默认最多返回100条结果
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 构建正则表达式
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; pattern &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= if&lt;&#x2F;span&gt;&lt;span&gt; req.whole_word.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;unwrap_or&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        format!(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;\b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;\b&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;req.query)
+&lt;&#x2F;span&gt;&lt;span&gt;    } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        req.query.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; regex &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;RegexBuilder::new(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;pattern)
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;case_insensitive&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;!&lt;&#x2F;span&gt;&lt;span&gt;case_sensitive)
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;map_err&lt;&#x2F;span&gt;&lt;span&gt;(|_| StatusCode::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;BAD_REQUEST&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; results &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;::new();
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 遍历 myblog&#x2F;content 目录
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; entry &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;WalkDir::new(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;myblog&#x2F;content&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;into_iter&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;filter_map&lt;&#x2F;span&gt;&lt;span&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;| e.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;ok&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;filter&lt;&#x2F;span&gt;&lt;span&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;e&lt;&#x2F;span&gt;&lt;span&gt;| e.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;extension&lt;&#x2F;span&gt;&lt;span&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;map_or&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;, |&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;ext&lt;&#x2F;span&gt;&lt;span&gt;| ext &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;md&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)) {
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let Ok&lt;&#x2F;span&gt;&lt;span&gt;(content) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;fs::read_to_string(entry.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 处理文件路径
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; file_path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; entry.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;strip_prefix&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;myblog&#x2F;content&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;unwrap_or&lt;&#x2F;span&gt;&lt;span&gt;(entry.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;with_extension&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;); 
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 构建相对URL路径
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; url_path &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;format!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&#x2F;myblog&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, file_path.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;display&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;replace&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;\\&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&#x2F;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;replace&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&#x2F;_index&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; lines: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;str&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; content.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;lines&lt;&#x2F;span&gt;&lt;span&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;collect&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(line_number, line) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; lines.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span&gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;enumerate&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; regex.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;is_match&lt;&#x2F;span&gt;&lt;span&gt;(line) {
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 获取上下文
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; context_before: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; lines
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;skip&lt;&#x2F;span&gt;&lt;span&gt;(line_number.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;saturating_sub&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;take&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span&gt;| s.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;collect&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;                    
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; context_after: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; lines
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;skip&lt;&#x2F;span&gt;&lt;span&gt;(line_number &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;take&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;s&lt;&#x2F;span&gt;&lt;span&gt;| s.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;())
+&lt;&#x2F;span&gt;&lt;span&gt;                        .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;collect&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;                    
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 高亮匹配文本
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; highlights &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Vec&lt;&#x2F;span&gt;&lt;span&gt;::new();
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; matches_count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; mat &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; regex.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;find_iter&lt;&#x2F;span&gt;&lt;span&gt;(line) {
+&lt;&#x2F;span&gt;&lt;span&gt;                        highlights.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;((mat.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;start&lt;&#x2F;span&gt;&lt;span&gt;(), mat.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;end&lt;&#x2F;span&gt;&lt;span&gt;()));
+&lt;&#x2F;span&gt;&lt;span&gt;                        matches_count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;                    }
+&lt;&#x2F;span&gt;&lt;span&gt;                    
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 计算相关性分数
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; score &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;calculate_score&lt;&#x2F;span&gt;&lt;span&gt;(line, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;req.query, matches_count);
+&lt;&#x2F;span&gt;&lt;span&gt;                    
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 提取元数据
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; metadata &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;HashMap::new();
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let Some&lt;&#x2F;span&gt;&lt;span&gt;(title) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;extract_title&lt;&#x2F;span&gt;&lt;span&gt;(entry.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;()) {
+&lt;&#x2F;span&gt;&lt;span&gt;                        metadata.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;insert&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;title&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;(), title);
+&lt;&#x2F;span&gt;&lt;span&gt;                    }
+&lt;&#x2F;span&gt;&lt;span&gt;                    
+&lt;&#x2F;span&gt;&lt;span&gt;                    results.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;(SearchResult {
+&lt;&#x2F;span&gt;&lt;span&gt;                        path: url_path.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span&gt;(),
+&lt;&#x2F;span&gt;&lt;span&gt;                        content: line.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;(),
+&lt;&#x2F;span&gt;&lt;span&gt;                        line_number: line_number &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                        context_before,
+&lt;&#x2F;span&gt;&lt;span&gt;                        context_after,
+&lt;&#x2F;span&gt;&lt;span&gt;                        score,
+&lt;&#x2F;span&gt;&lt;span&gt;                        highlights,
+&lt;&#x2F;span&gt;&lt;span&gt;                        metadata: &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Some&lt;&#x2F;span&gt;&lt;span&gt;(metadata),
+&lt;&#x2F;span&gt;&lt;span&gt;                    });
+&lt;&#x2F;span&gt;&lt;span&gt;                }
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 按相关性分数排序
+&lt;&#x2F;span&gt;&lt;span&gt;    results.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;sort_by&lt;&#x2F;span&gt;&lt;span&gt;(|&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;| b.score.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;partial_cmp&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;a.score).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;unwrap_or&lt;&#x2F;span&gt;&lt;span&gt;(std::cmp::Ordering::Equal));
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 限制结果数量
+&lt;&#x2F;span&gt;&lt;span&gt;    results.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;truncate&lt;&#x2F;span&gt;&lt;span&gt;(max_results);
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Ok&lt;&#x2F;span&gt;&lt;span&gt;(Json(results))
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&#x2F;&#x2F; 从文件中提取标题
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;extract_title&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;path&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;std::path::Path) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;String&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt; {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;let Ok&lt;&#x2F;span&gt;&lt;span&gt;(content) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;fs::read_to_string(path) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; content.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;lines&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; line.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;starts_with&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;title = &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;Some&lt;&#x2F;span&gt;&lt;span&gt;(line.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;trim_start_matches&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;title = &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;trim_matches&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;&amp;quot;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;                    .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;());
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;None
+&lt;&#x2F;span&gt;&lt;span&gt;} 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;chao-chang-dai-ma-kuai-ce-shi&quot;&gt;超长代码块测试&lt;&#x2F;h2&gt;
+&lt;p&gt;这是一个非常长的代码块，包含详细的注释和多个方法：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span style=&quot;text-decoration:underline;color:#a6e22e;&quot;&gt;ComplexExample&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;这是一个复杂的示例类，用于测试代码块的滚动效果&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__init__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;初始化方法&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.name &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;name
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{}
+&lt;&#x2F;span&gt;&lt;span&gt;        self.history &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;add_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;value&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;添加数据到字典中&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 如果键已存在，保存旧值到历史记录
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;update&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;old_value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: self.data[key],
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;new_value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: value
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 如果是新键，记录添加操作
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;add&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: value
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 更新数据
+&lt;&#x2F;span&gt;&lt;span&gt;        self.data[key] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;value
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;get_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;获取数据&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;raise &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;KeyError&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;键 &amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;{key}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39; 不存在&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;remove_data&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;删除数据&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;key &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;self.data:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 记录删除操作
+&lt;&#x2F;span&gt;&lt;span&gt;            self.history.append({
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;action&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;delete&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;key&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: key,
+&lt;&#x2F;span&gt;&lt;span&gt;                &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;value&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;            })
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;del &lt;&#x2F;span&gt;&lt;span&gt;self.data[key]
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;False
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;get_history&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;获取操作历史&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;self.history
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;clear_history&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;清空历史记录&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        self.history &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[]
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;历史记录已清空&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;__str__&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;字符串表示&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;ComplexExample(name=&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;{self.name}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;#39;, data_count=&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;(self.data)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;)&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;bu-tong-yu-yan-de-dai-ma-kuai-ce-shi&quot;&gt;不同语言的代码块测试&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;javascriptdai-ma-kuai&quot;&gt;JavaScript代码块&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;class &lt;&#x2F;span&gt;&lt;span&gt;SimpleCalculator {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;constructor&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span&gt;number;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;subtract&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#fd971f;&quot;&gt;number&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        this.result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;-= &lt;&#x2F;span&gt;&lt;span&gt;number;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;getResult&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;this.result;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;htmldai-ma-kuai&quot;&gt;HTML代码块&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;DOCTYPE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;zh&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;charset&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;测试页面&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;style&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;.container &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;padding&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;20&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;margin&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;10&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#66d9ef;&quot;&gt;border&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;px &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;solid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;#ccc&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;style&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;container&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;测试标题&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;这是一个测试段落&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>测试锚点功能</title>
+        <published>2024-01-01T00:00:00+00:00</published>
+        <updated>2024-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="/myblog/blog/test-anchor/"/>
+        <id>/myblog/blog/test-anchor/</id>
+        
+        <content type="html" xml:base="/myblog/blog/test-anchor/">&lt;h1 id=&quot;ce-shi-biao-ti-yi&quot;&gt;测试标题一&lt;&#x2F;h1&gt;
+&lt;p&gt;这是第一段文本，用于测试普通段落的锚点功能。每个段落都应该有自己的行号和唯一ID。&lt;&#x2F;p&gt;
+&lt;p&gt;这是第二段文本，我们可以通过在URL后添加 &lt;code&gt;#L2&lt;&#x2F;code&gt; 来直接跳转到这个段落。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ce-shi-dai-ma-kuai&quot;&gt;测试代码块&lt;&#x2F;h2&gt;
+&lt;p&gt;下面是一个代码块示例：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;font-style:italic;color:#f92672;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a6e22e;&quot;&gt;hello_world&lt;&#x2F;span&gt;&lt;span&gt;():
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#66d9ef;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e6db74;&quot;&gt;&amp;quot;Hello, World!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f92672;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;True
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#75715e;&quot;&gt;# 调用函数
+&lt;&#x2F;span&gt;&lt;span&gt;hello_world()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;ce-shi-lie-biao&quot;&gt;测试列表&lt;&#x2F;h2&gt;
+&lt;p&gt;下面是一个无序列表：&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;列表项一&lt;&#x2F;li&gt;
+&lt;li&gt;列表项二&lt;&#x2F;li&gt;
+&lt;li&gt;列表项三&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;下面是一个有序列表：&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一项&lt;&#x2F;li&gt;
+&lt;li&gt;第二项&lt;&#x2F;li&gt;
+&lt;li&gt;第三项&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;ce-shi-yin-yong&quot;&gt;测试引用&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一段引用文本，用于测试引用块的锚点功能。
+这是引用的第二行。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;ce-shi-biao-ge&quot;&gt;测试表格&lt;&#x2F;h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;列1&lt;&#x2F;th&gt;&lt;th&gt;列2&lt;&#x2F;th&gt;&lt;th&gt;列3&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;A1&lt;&#x2F;td&gt;&lt;td&gt;B1&lt;&#x2F;td&gt;&lt;td&gt;C1&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;A2&lt;&#x2F;td&gt;&lt;td&gt;B2&lt;&#x2F;td&gt;&lt;td&gt;C2&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;zui-hou-yi-duan&quot;&gt;最后一段&lt;&#x2F;h2&gt;
+&lt;p&gt;这是文章的最后一段，用于测试跳转到文章末尾的功能。你可以通过添加 &lt;code&gt;#L最后&lt;&#x2F;code&gt; 来跳转到这里。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

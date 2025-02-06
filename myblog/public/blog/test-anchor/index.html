@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>测试锚点功能 - 千虑者 - 个人博客</title>
+    <meta name="author" content="千虑者">
+    <meta name="description" content="这是一个用于测试文章页面锚点功能的测试文章">
+    <meta name="keywords" content="测试">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/x-icon" href="/myblog/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/myblog/favicon.ico">
+    
+    <!-- Mobile Meta -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/myblog/blog/test-anchor/">
+    <meta property="og:title" content="测试锚点功能">
+    <meta property="og:description" content="这是一个用于测试文章页面锚点功能的测试文章">
+    <meta property="og:image" content="/myblog/shaonv.jpeg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="/myblog/blog/test-anchor/">
+    <meta name="twitter:title" content="千虑者">
+    <meta name="twitter:description" content="(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)">
+    <meta name="twitter:image" content="/myblog/shaonv.jpeg">
+    
+    <!-- Verification -->
+    
+    
+    
+    
+    <!-- Links -->
+    <link rel="stylesheet" href="/myblog/style.css">
+    <link rel="stylesheet" href="/myblog/code.css">    
+    <link rel="stylesheet" href="/myblog/js/highlight.css">    
+    <!-- 代码复制功能 -->
+    <script src="/myblog/js/code-copy.js"></script>
+    <link rel="canonical" href="/myblog/blog/test-anchor/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/myblog/rss.xml">
+    
+    <!-- Theme Support -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    
+    <!-- 预加载主题样式 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentHour = new Date().getHours();
+            const isDarkTime = currentHour >= 22 || currentHour < 6;
+            
+            document.documentElement.setAttribute('data-theme', 
+                savedTheme || (isDarkTime ? 'dark' : (prefersDark ? 'dark' : 'light'))
+            );
+        })();
+    </script>
+    
+    <!-- 添加侧边栏按钮图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --title-color: #1a1a1a;
+            --border-color: #eaeaea;
+            --link-color: #42b983;
+            --primary-color: #42b983;
+            --secondary-color: #718096;
+            --hover-color: rgba(66, 185, 131, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f6f8fa;
+            --code-color: #476582;
+            --code-quote-color: #5ccb91;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --title-color: #ffffff;
+            --border-color: #333333;
+            --link-color: #5ccb91;
+            --primary-color: #5ccb91;
+            --secondary-color: #a0aec0;
+            --hover-color: rgba(92, 203, 145, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --code-bg: #2d2d2d;
+            --code-color: #e2e8f0;
+            --code-quote-color: #5ccb91;
+        }
+        
+        /* 主题切换按钮样式 */
+        .theme-toggle {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        
+        /* 添加平滑过渡 */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* 容器样式 */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 侧边栏样式 */
+        .sidebar {
+            position: fixed;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-color);
+            border-right: 1px solid var(--border-color);
+            padding: 2rem;
+            overflow-y: auto;
+            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            
+            /* 添加弹性布局实现居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 调整内容容器样式 */
+        .sidebar-content {
+            width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            /* 添加弹性布局 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .sidebar-content::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 调整 profile 样式 */
+        .profile {
+            text-align: center;
+            width: 100%;
+            margin: 0; /* 移除底部边距 */
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--border-color);
+            background: var(--bg-color);
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 70% center;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .avatar:hover img {
+            transform: scale(1.15);
+        }
+        
+        .site-title {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .site-description {
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* 导航样式 */
+        .nav {
+            width: 100%;
+        }
+        
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .nav a:hover {
+            background: var(--hover-color);
+            transform: translateX(4px);
+        }
+        
+        /* 行内代码块样式 */
+        code:not([class]) {
+            color: var(--code-quote-color);
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        /* 主内容区域样式 */
+        .content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+    
+    </head>
+<body>
+    <!-- 添加移动端侧边栏切换按钮 -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="切换侧边栏">
+        <i class="ri-menu-line"></i>
+    </button>
+
+    <!-- 添加遮罩层 -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="profile">
+                    <div class="avatar">
+                        <img src="/myblog/shaonv.jpeg" alt="千虑者">
+                    </div>
+                    <h1 class="site-title">千虑者</h1>
+                    <p class="site-description">(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" onclick="openSearch()">搜索</a>
+                        </li>
+                        <li><a href="&#x2F;myblog/">首页</a></li>
+                        <li><a href="&#x2F;myblog/blog/">文章</a></li>
+                        <li><a href="&#x2F;myblog/gallery/">图库</a></li>
+                        <li><a href="&#x2F;myblog/tags/">标签</a></li>
+                        <li><a href="&#x2F;myblog/about/">关于</a></li>
+                        <li><a href="&#x2F;myblog/friends/">友链</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                                <span class="theme-toggle-icon">🌓</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="content">
+            
+<div class="blog-container">
+    <div class="blog-content">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">测试锚点功能</h1>
+                <div class="post-meta">
+                    <time>2024-01-01</time>
+                    
+                    <div class="post-tags">
+                        
+                        <a href="/myblog/tags/ce-shi/" class="tag">测试</a>
+                        
+                    </div>
+                    
+                </div>
+            </header>
+            <div class="post-content">
+                <link rel="stylesheet" href="/myblog/code.css">
+                <h1 id="ce-shi-biao-ti-yi">测试标题一</h1>
+<p>这是第一段文本，用于测试普通段落的锚点功能。每个段落都应该有自己的行号和唯一ID。</p>
+<p>这是第二段文本，我们可以通过在URL后添加 <code>#L2</code> 来直接跳转到这个段落。</p>
+<h2 id="ce-shi-dai-ma-kuai">测试代码块</h2>
+<p>下面是一个代码块示例：</p>
+<pre data-lang="python" style="background-color:#272822;color:#f8f8f2;" class="language-python "><code class="language-python" data-lang="python"><span style="font-style:italic;color:#f92672;">def </span><span style="color:#a6e22e;">hello_world</span><span>():
+</span><span>    </span><span style="color:#66d9ef;">print</span><span>(</span><span style="color:#e6db74;">&quot;Hello, World!&quot;</span><span>)
+</span><span>    </span><span style="color:#f92672;">return </span><span style="color:#ae81ff;">True
+</span><span>
+</span><span style="color:#75715e;"># 调用函数
+</span><span>hello_world()
+</span></code></pre>
+<h2 id="ce-shi-lie-biao">测试列表</h2>
+<p>下面是一个无序列表：</p>
+<ul>
+<li>列表项一</li>
+<li>列表项二</li>
+<li>列表项三</li>
+</ul>
+<p>下面是一个有序列表：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h2 id="ce-shi-yin-yong">测试引用</h2>
+<blockquote>
+<p>这是一段引用文本，用于测试引用块的锚点功能。
+这是引用的第二行。</p>
+</blockquote>
+<h2 id="ce-shi-biao-ge">测试表格</h2>
+<table><thead><tr><th>列1</th><th>列2</th><th>列3</th></tr></thead><tbody>
+<tr><td>A1</td><td>B1</td><td>C1</td></tr>
+<tr><td>A2</td><td>B2</td><td>C2</td></tr>
+</tbody></table>
+<h2 id="zui-hou-yi-duan">最后一段</h2>
+<p>这是文章的最后一段，用于测试跳转到文章末尾的功能。你可以通过添加 <code>#L最后</code> 来跳转到这里。</p>
+
+            </div>
+        </article>
+    </div>
+</div>
+
+<style>
+/* 文章容器样式 */
+.blog-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 文章卡片样式 */
+.post {
+    background: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* 文章头部样式 */
+.post-header {
+    padding: 2rem 2rem 0;
+}
+
+.post-title {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--title-color);
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* 标签样式 */
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: var(--hover-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* 文章内容样式 */
+.post-content {
+    margin-top: 2rem;
+    line-height: 1.8;
+    padding: 0 2rem 2rem;
+}
+
+/* 链接样式 */
+.post-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-color);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.post-content a:hover {
+    opacity: 1;
+    border-bottom-width: 2px;
+}
+
+/* 引用样式 */
+.post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    background: var(--hover-color);
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+/* 表格样式 */
+.post-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.post-content th,
+.post-content td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.post-content th {
+    background: var(--hover-color);
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.post-content tr:nth-child(even) {
+    background: var(--hover-color);
+}
+
+/* 列表样式 */
+.post-content ul,
+.post-content ol {
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+.post-content li {
+    margin: 0.5rem 0;
+}
+
+/* 图片样式 */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem;
+    }
+
+    .post-header {
+        padding: 1.5rem 1.5rem 0;
+    }
+
+    .post-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .post-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* 深色模式下的特殊样式 */
+[data-theme="dark"] .post-content {
+    /* 调整图片亮度 */
+    img {
+        filter: brightness(0.8);
+    }
+
+    /* 调整代码高亮 */
+    .highlight {
+        filter: brightness(0.9);
+    }
+
+    /* 调整表格样式 */
+    tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* 调整引用样式 */
+    blockquote {
+        background: rgba(66, 185, 131, 0.1);
+    }
+}
+</style>
+
+<!-- 在文章页面添加 Article 结构化数据 -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "测试锚点功能",
+    "datePublished": "2024-01-01",
+    "dateModified": "2024-01-01",
+    "author": {
+        "@type": "Person",
+        "name": "千虑者"
+    },
+    "description": "这是一个用于测试文章页面锚点功能的测试文章",
+    "url": "/myblog/blog/test-anchor/"
+}
+</script>
+
+        </main>
+    </div>
+
+    <!-- 搜索对话框 -->
+    <div id="search-dialog" class="search-dialog">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="search-input" placeholder="输入关键词搜索...">
+                <button onclick="performSearch()">搜索</button>
+                <button onclick="closeSearch()">关闭</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- 脚本放在 body 末尾 -->
+    <script src="/myblog/js/search.js"></script>
+    <script src="/myblog/js/script.js"></script>
+    <script>
+        // 主题管理
+        const themeManager = {
+            // 获取系统主题偏好
+            getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            },
+
+            // 获取当前时间是否在夜间模式范围内
+            isNightTime() {
+                const hour = new Date().getHours();
+                const startHour = 22;
+                const endHour = 6;
+                return hour >= startHour || hour < endHour;
+            },
+
+            // 获取存储的主题
+            getSavedTheme() {
+                return localStorage.getItem('theme');
+            },
+
+            // 设置主题
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                this.updateThemeIcon(theme);
+            },
+
+            // 更新主题图标
+            updateThemeIcon(theme) {
+                const icon = document.querySelector('.theme-toggle-icon');
+                icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+            },
+
+            // 初始化主题
+            init() {
+                const savedTheme = this.getSavedTheme();
+                const systemTheme = this.getSystemTheme();
+                const shouldUseDark = true && this.isNightTime();
+                
+                const theme = savedTheme || (shouldUseDark ? 'dark' : systemTheme);
+                this.setTheme(theme);
+
+                // 监听系统主题变化
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    if (!this.getSavedTheme()) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+
+                // 监听主题切换按钮点击
+                document.getElementById('theme-toggle').addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    this.setTheme(newTheme);
+                });
+            }
+        };
+
+        // 初始化主题管理
+        document.addEventListener('DOMContentLoaded', () => themeManager.init());
+    </script>
+    <script src="/js/code-copy.js"></script>
+</body>
+</html>

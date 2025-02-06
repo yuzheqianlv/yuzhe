@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Stats 模块问答笔记 - 千虑者 - 个人博客</title>
+    <meta name="author" content="千虑者">
+    <meta name="description" content="Stats 模块问答笔记的详细说明">
+    <meta name="keywords" content="未分类">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/x-icon" href="/myblog/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/myblog/favicon.ico">
+    
+    <!-- Mobile Meta -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/myblog/blog/11-stats-qa/">
+    <meta property="og:title" content="Stats 模块问答笔记">
+    <meta property="og:description" content="Stats 模块问答笔记的详细说明">
+    <meta property="og:image" content="/myblog/shaonv.jpeg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="/myblog/blog/11-stats-qa/">
+    <meta name="twitter:title" content="千虑者">
+    <meta name="twitter:description" content="(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)">
+    <meta name="twitter:image" content="/myblog/shaonv.jpeg">
+    
+    <!-- Verification -->
+    
+    
+    
+    
+    <!-- Links -->
+    <link rel="stylesheet" href="/myblog/style.css">
+    <link rel="stylesheet" href="/myblog/code.css">    
+    <link rel="stylesheet" href="/myblog/js/highlight.css">    
+    <!-- 代码复制功能 -->
+    <script src="/myblog/js/code-copy.js"></script>
+    <link rel="canonical" href="/myblog/blog/11-stats-qa/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/myblog/rss.xml">
+    
+    <!-- Theme Support -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a">
+    
+    <!-- 预加载主题样式 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentHour = new Date().getHours();
+            const isDarkTime = currentHour >= 22 || currentHour < 6;
+            
+            document.documentElement.setAttribute('data-theme', 
+                savedTheme || (isDarkTime ? 'dark' : (prefersDark ? 'dark' : 'light'))
+            );
+        })();
+    </script>
+    
+    <!-- 添加侧边栏按钮图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --title-color: #1a1a1a;
+            --border-color: #eaeaea;
+            --link-color: #42b983;
+            --primary-color: #42b983;
+            --secondary-color: #718096;
+            --hover-color: rgba(66, 185, 131, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --code-bg: #f6f8fa;
+            --code-color: #476582;
+            --code-quote-color: #5ccb91;
+        }
+        
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --title-color: #ffffff;
+            --border-color: #333333;
+            --link-color: #5ccb91;
+            --primary-color: #5ccb91;
+            --secondary-color: #a0aec0;
+            --hover-color: rgba(92, 203, 145, 0.1);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --code-bg: #2d2d2d;
+            --code-color: #e2e8f0;
+            --code-quote-color: #5ccb91;
+        }
+        
+        /* 主题切换按钮样式 */
+        .theme-toggle {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(30deg);
+        }
+        
+        /* 添加平滑过渡 */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* 容器样式 */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* 侧边栏样式 */
+        .sidebar {
+            position: fixed;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-color);
+            border-right: 1px solid var(--border-color);
+            padding: 2rem;
+            overflow-y: auto;
+            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            
+            /* 添加弹性布局实现居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 调整内容容器样式 */
+        .sidebar-content {
+            width: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            /* 添加弹性布局 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .sidebar-content::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 调整 profile 样式 */
+        .profile {
+            text-align: center;
+            width: 100%;
+            margin: 0; /* 移除底部边距 */
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--border-color);
+            background: var(--bg-color);
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 70% center;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .avatar:hover img {
+            transform: scale(1.15);
+        }
+        
+        .site-title {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .site-description {
+            font-size: 0.875rem;
+            color: var(--secondary-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* 导航样式 */
+        .nav {
+            width: 100%;
+        }
+        
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .nav a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .nav a:hover {
+            background: var(--hover-color);
+            transform: translateX(4px);
+        }
+        
+        /* 行内代码块样式 */
+        code:not([class]) {
+            color: var(--code-quote-color);
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        /* 主内容区域样式 */
+        .content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .content {
+                margin-left: 0;
+            }
+        }
+    </style>
+    
+    </head>
+<body>
+    <!-- 添加移动端侧边栏切换按钮 -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="切换侧边栏">
+        <i class="ri-menu-line"></i>
+    </button>
+
+    <!-- 添加遮罩层 -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="profile">
+                    <div class="avatar">
+                        <img src="/myblog/shaonv.jpeg" alt="千虑者">
+                    </div>
+                    <h1 class="site-title">千虑者</h1>
+                    <p class="site-description">(✿╹◡╹) 智者千虑必有一失,愚者千虑必有一得(╹◡╹✿)</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" onclick="openSearch()">搜索</a>
+                        </li>
+                        <li><a href="&#x2F;myblog/">首页</a></li>
+                        <li><a href="&#x2F;myblog/blog/">文章</a></li>
+                        <li><a href="&#x2F;myblog/gallery/">图库</a></li>
+                        <li><a href="&#x2F;myblog/tags/">标签</a></li>
+                        <li><a href="&#x2F;myblog/about/">关于</a></li>
+                        <li><a href="&#x2F;myblog/friends/">友链</a></li>
+                        <li>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                                <span class="theme-toggle-icon">🌓</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <main class="content">
+            
+<div class="blog-container">
+    <div class="blog-content">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">Stats 模块问答笔记</h1>
+                <div class="post-meta">
+                    <time>2025-02-05</time>
+                    
+                    <div class="post-tags">
+                        
+                        <a href="/myblog/tags/wei-fen-lei/" class="tag">未分类</a>
+                        
+                    </div>
+                    
+                </div>
+            </header>
+            <div class="post-content">
+                <link rel="stylesheet" href="/myblog/code.css">
+                <h1 id="stats-mo-kuai-wen-da-bi-ji">Stats 模块问答笔记</h1>
+<h2 id="ji-chu-gai-nian">基础概念</h2>
+<p>Q1: Stats 模块的主要功能是什么？
+A1: Stats 模块是 SimdPhrase 项目中负责搜索性能统计的核心组件，主要功能包括：</p>
+<ul>
+<li>搜索过程各阶段的时间统计</li>
+<li>性能指标分析</li>
+<li>性能瓶颈识别</li>
+<li>优化效果评估</li>
+</ul>
+<p>Q2: Stats 模块的核心数据结构是什么？
+A2: Stats 模块使用了以下关键数据结构：</p>
+<pre data-lang="rust" style="background-color:#272822;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[derive(Default)]
+</span><span style="color:#f92672;">pub </span><span style="font-style:italic;color:#66d9ef;">struct </span><span>Stats {
+</span><span>    </span><span style="color:#75715e;">// 标准化和分词时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>normalize_tokenize: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 合并和最小化时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>merge_minimize: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 第一次二分查找时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>first_binary_search: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 第一次交集计算时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>first_intersect: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 第二次二分查找时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>second_binary_search: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 第二次交集计算时间
+</span><span>    </span><span style="color:#f92672;">pub </span><span>second_intersect: AtomicU64,
+</span><span>    </span><span style="color:#75715e;">// 搜索迭代次数
+</span><span>    </span><span style="color:#f92672;">pub </span><span>iters: AtomicU64,
+</span><span>}
+</span></code></pre>
+<h2 id="tong-ji-zhi-biao">统计指标</h2>
+<p>Q3: Stats 模块收集哪些关键指标？
+A3: 主要统计指标包括：</p>
+<ol>
+<li>
+<p>文本处理指标：</p>
+<ul>
+<li>标准化和分词时间(normalize_tokenize)</li>
+<li>合并和最小化时间(merge_minimize)</li>
+</ul>
+</li>
+<li>
+<p>搜索性能指标：</p>
+<ul>
+<li>二分查找时间(first_binary_search, second_binary_search)</li>
+<li>交集计算时间(first_intersect, second_intersect)</li>
+<li>SIMD 加速效果(first_intersect_simd, second_intersect_simd)</li>
+</ul>
+</li>
+<li>
+<p>优化策略指标：</p>
+<ul>
+<li>朴素算法时间(first_intersect_naive, second_intersect_naive)</li>
+<li>Galloping 算法时间(first_intersect_gallop, second_intersect_gallop)</li>
+<li>合并阶段时间(merge_phases_first_pass, merge_phases_second_pass)</li>
+</ul>
+</li>
+</ol>
+<p>Q4: 如何设计高效的数据收集策略？
+A4: 数据收集策略包括：</p>
+<ul>
+<li>使用 AtomicU64 实现无锁计数</li>
+<li>采用 Relaxed 内存序保证性能</li>
+<li>分阶段精确计时</li>
+<li>自动统计迭代次数</li>
+</ul>
+<h2 id="xing-neng-fen-xi">性能分析</h2>
+<p>Q5: 如何实现性能分析？
+A5: 性能分析实现方案：</p>
+<pre data-lang="rust" style="background-color:#272822;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="font-style:italic;color:#66d9ef;">impl </span><span>Debug </span><span style="color:#f92672;">for </span><span>Stats {
+</span><span>    </span><span style="font-style:italic;color:#66d9ef;">fn </span><span style="color:#a6e22e;">fmt</span><span>(</span><span style="color:#f92672;">&amp;</span><span style="font-style:italic;color:#fd971f;">self</span><span>, </span><span style="font-style:italic;color:#fd971f;">f</span><span>: </span><span style="color:#f92672;">&amp;mut </span><span>std::fmt::Formatter&lt;&#39;</span><span style="color:#f92672;">_</span><span>&gt;) -&gt; std::fmt::Result {
+</span><span>        </span><span style="color:#75715e;">// 计算总时间
+</span><span>        </span><span style="font-style:italic;color:#66d9ef;">let</span><span> sum </span><span style="color:#f92672;">= </span><span>self.normalize_tokenize.</span><span style="color:#66d9ef;">load</span><span>(Relaxed)
+</span><span>            </span><span style="color:#f92672;">+ </span><span>self.merge_minimize.</span><span style="color:#66d9ef;">load</span><span>(Relaxed)
+</span><span>            </span><span style="color:#f92672;">+ </span><span>self.first_binary_search.</span><span style="color:#66d9ef;">load</span><span>(Relaxed)
+</span><span>            </span><span style="color:#f92672;">+ </span><span>self.first_intersect.</span><span style="color:#66d9ef;">load</span><span>(Relaxed)
+</span><span>            </span><span style="color:#f92672;">+ </span><span>self.second_binary_search.</span><span style="color:#66d9ef;">load</span><span>(Relaxed)
+</span><span>            </span><span style="color:#f92672;">+ </span><span>self.second_intersect.</span><span style="color:#66d9ef;">load</span><span>(Relaxed);
+</span><span>            
+</span><span>        </span><span style="color:#75715e;">// 计算各阶段占比
+</span><span>        </span><span style="font-style:italic;color:#66d9ef;">let</span><span> per_normalize_tokenize </span><span style="color:#f92672;">=</span><span> normalize_tokenize </span><span style="color:#f92672;">/</span><span> sum </span><span style="color:#f92672;">* </span><span style="color:#ae81ff;">100</span><span style="font-style:italic;color:#66d9ef;">f64</span><span>;
+</span><span>        </span><span style="color:#75715e;">// ...
+</span><span>        
+</span><span>        </span><span style="color:#75715e;">// 格式化输出统计信息
+</span><span>        f.</span><span style="color:#66d9ef;">debug_struct</span><span>(</span><span style="color:#e6db74;">&quot;Stats&quot;</span><span>)
+</span><span>            .</span><span style="color:#66d9ef;">field</span><span>(
+</span><span>                </span><span style="color:#e6db74;">&quot;normalize_tokenize&quot;</span><span>,
+</span><span>                </span><span style="color:#f92672;">&amp;</span><span>format_args!(
+</span><span>                    </span><span style="color:#e6db74;">&quot;({:08.3}ms, {:08.3}us/iter, {per_normalize_tokenize:06.3}%)&quot;</span><span>,
+</span><span>                    normalize_tokenize </span><span style="color:#f92672;">/ </span><span style="color:#ae81ff;">1000</span><span style="font-style:italic;color:#66d9ef;">f64</span><span>,
+</span><span>                    normalize_tokenize </span><span style="color:#f92672;">/</span><span> iters,
+</span><span>                ),
+</span><span>            )
+</span><span>            </span><span style="color:#75715e;">// ...
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Q6: 如何优化性能统计的开销？
+A6: 优化策略包括：</p>
+<ul>
+<li>使用原子操作避免锁竞争</li>
+<li>采用 Relaxed 内存序降低同步开销</li>
+<li>按需收集关键指标</li>
+<li>异步输出统计结果</li>
+</ul>
+<h2 id="xing-neng-you-hua">性能优化</h2>
+<p>Q7: Stats 模块如何支持性能优化？
+A7: 主要支持方式：</p>
+<ol>
+<li>
+<p>算法优化：</p>
+<ul>
+<li>SIMD 加速效果分析</li>
+<li>Galloping 算法效果评估</li>
+<li>朴素算法性能对比</li>
+</ul>
+</li>
+<li>
+<p>阶段优化：</p>
+<ul>
+<li>识别耗时阶段</li>
+<li>计算时间占比</li>
+<li>评估优化效果</li>
+</ul>
+</li>
+</ol>
+<p>Q8: 如何利用统计数据进行系统优化？
+A8: 优化应用策略：</p>
+<ul>
+<li>分析各阶段时间占比</li>
+<li>对比不同算法性能</li>
+<li>评估优化措施效果</li>
+<li>持续监控性能变化</li>
+</ul>
+<h2 id="shi-yong-shi-li">使用示例</h2>
+<p>Q9: 如何使用 Stats 模块收集性能数据？
+A9: 使用示例：</p>
+<pre data-lang="rust" style="background-color:#272822;color:#f8f8f2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#75715e;">// 创建统计实例
+</span><span style="font-style:italic;color:#66d9ef;">let</span><span> stats </span><span style="color:#f92672;">= </span><span>Stats::default();
+</span><span>
+</span><span style="color:#75715e;">// 记录各阶段时间
+</span><span>stats.normalize_tokenize.</span><span style="color:#66d9ef;">store</span><span>(time_ns, Relaxed);
+</span><span>stats.first_binary_search.</span><span style="color:#66d9ef;">store</span><span>(time_ns, Relaxed);
+</span><span>stats.first_intersect_simd.</span><span style="color:#66d9ef;">store</span><span>(time_ns, Relaxed);
+</span><span>
+</span><span style="color:#75715e;">// 输出统计结果
+</span><span>println!(</span><span style="color:#e6db74;">&quot;</span><span style="color:#ae81ff;">{:?}</span><span style="color:#e6db74;">&quot;</span><span>, stats);
+</span></code></pre>
+<p>Q10: 如何解读性能统计结果？
+A10: 结果解读方法：</p>
+<ol>
+<li>
+<p>时间指标：</p>
+<ul>
+<li>总耗时分析</li>
+<li>平均耗时计算</li>
+<li>各阶段占比</li>
+</ul>
+</li>
+<li>
+<p>优化效果：</p>
+<ul>
+<li>SIMD 加速比</li>
+<li>算法性能对比</li>
+<li>迭代次数统计</li>
+</ul>
+</li>
+</ol>
+<h2 id="zui-jia-shi-jian">最佳实践</h2>
+<p>Q11: Stats 模块使用的最佳实践是什么？
+A11: 最佳实践包括：</p>
+<ol>
+<li>
+<p>性能统计：</p>
+<ul>
+<li>合理设置统计点</li>
+<li>选择关键指标</li>
+<li>定期分析数据</li>
+</ul>
+</li>
+<li>
+<p>优化建议：</p>
+<ul>
+<li>关注高耗时阶段</li>
+<li>评估优化方案</li>
+<li>持续监控改进</li>
+</ul>
+</li>
+</ol>
+<p>Q12: 如何保证统计数据的准确性？
+A12: 保证措施：</p>
+<ol>
+<li>
+<p>数据收集：</p>
+<ul>
+<li>使用原子操作</li>
+<li>精确计时</li>
+<li>避免统计干扰</li>
+</ul>
+</li>
+<li>
+<p>结果分析：</p>
+<ul>
+<li>计算平均值</li>
+<li>考虑采样误差</li>
+<li>验证数据一致性</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+        </article>
+    </div>
+</div>
+
+<style>
+/* 文章容器样式 */
+.blog-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.blog-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 文章卡片样式 */
+.post {
+    background: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* 文章头部样式 */
+.post-header {
+    padding: 2rem 2rem 0;
+}
+
+.post-title {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: var(--title-color);
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* 标签样式 */
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: var(--hover-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* 文章内容样式 */
+.post-content {
+    margin-top: 2rem;
+    line-height: 1.8;
+    padding: 0 2rem 2rem;
+}
+
+/* 链接样式 */
+.post-content a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-color);
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.post-content a:hover {
+    opacity: 1;
+    border-bottom-width: 2px;
+}
+
+/* 引用样式 */
+.post-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    background: var(--hover-color);
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+/* 表格样式 */
+.post-content table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+}
+
+.post-content th,
+.post-content td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.post-content th {
+    background: var(--hover-color);
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.post-content tr:nth-child(even) {
+    background: var(--hover-color);
+}
+
+/* 列表样式 */
+.post-content ul,
+.post-content ol {
+    padding-left: 1.5rem;
+    color: var(--text-color);
+}
+
+.post-content li {
+    margin: 0.5rem 0;
+}
+
+/* 图片样式 */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem;
+    }
+
+    .post-header {
+        padding: 1.5rem 1.5rem 0;
+    }
+
+    .post-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .post-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* 深色模式下的特殊样式 */
+[data-theme="dark"] .post-content {
+    /* 调整图片亮度 */
+    img {
+        filter: brightness(0.8);
+    }
+
+    /* 调整代码高亮 */
+    .highlight {
+        filter: brightness(0.9);
+    }
+
+    /* 调整表格样式 */
+    tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* 调整引用样式 */
+    blockquote {
+        background: rgba(66, 185, 131, 0.1);
+    }
+}
+</style>
+
+<!-- 在文章页面添加 Article 结构化数据 -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Stats 模块问答笔记",
+    "datePublished": "2025-02-05",
+    "dateModified": "2025-02-05",
+    "author": {
+        "@type": "Person",
+        "name": "千虑者"
+    },
+    "description": "Stats 模块问答笔记的详细说明",
+    "url": "/myblog/blog/11-stats-qa/"
+}
+</script>
+
+        </main>
+    </div>
+
+    <!-- 搜索对话框 -->
+    <div id="search-dialog" class="search-dialog">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="search-input" placeholder="输入关键词搜索...">
+                <button onclick="performSearch()">搜索</button>
+                <button onclick="closeSearch()">关闭</button>
+            </div>
+            <div id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- 脚本放在 body 末尾 -->
+    <script src="/myblog/js/search.js"></script>
+    <script src="/myblog/js/script.js"></script>
+    <script>
+        // 主题管理
+        const themeManager = {
+            // 获取系统主题偏好
+            getSystemTheme() {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            },
+
+            // 获取当前时间是否在夜间模式范围内
+            isNightTime() {
+                const hour = new Date().getHours();
+                const startHour = 22;
+                const endHour = 6;
+                return hour >= startHour || hour < endHour;
+            },
+
+            // 获取存储的主题
+            getSavedTheme() {
+                return localStorage.getItem('theme');
+            },
+
+            // 设置主题
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                this.updateThemeIcon(theme);
+            },
+
+            // 更新主题图标
+            updateThemeIcon(theme) {
+                const icon = document.querySelector('.theme-toggle-icon');
+                icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+            },
+
+            // 初始化主题
+            init() {
+                const savedTheme = this.getSavedTheme();
+                const systemTheme = this.getSystemTheme();
+                const shouldUseDark = true && this.isNightTime();
+                
+                const theme = savedTheme || (shouldUseDark ? 'dark' : systemTheme);
+                this.setTheme(theme);
+
+                // 监听系统主题变化
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    if (!this.getSavedTheme()) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+
+                // 监听主题切换按钮点击
+                document.getElementById('theme-toggle').addEventListener('click', () => {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    this.setTheme(newTheme);
+                });
+            }
+        };
+
+        // 初始化主题管理
+        document.addEventListener('DOMContentLoaded', () => themeManager.init());
+    </script>
+    <script src="/js/code-copy.js"></script>
+</body>
+</html>
