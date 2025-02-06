@@ -81,29 +81,21 @@
 }
 
 /* 文字动画基础样式 */
-.animate-text {
-    opacity: 0; /* 初始状态为隐藏 */
-    transform: translateY(20px);
-    visibility: hidden; /* 初始状态隐藏 */
+.typewriter {
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* 动画效果 */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-        visibility: visible;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-    }
+.typewriter.typing {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* 添加动画激活类 */
-.animate-text.animate {
-    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.typewriter.completed {
+    opacity: 1;
+    transform: none;
 }
 
 /* 标题样式 */
@@ -232,31 +224,33 @@
     }
 }
 
-/* 修改打字机效果相关样式 */
+/* 打字机效果相关样式 */
 .typewriter {
-    border-right: 2px solid transparent; /* 改为透明边框 */
+    position: relative;
     white-space: pre-wrap;
     overflow: hidden;
+}
+
+.typewriter::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary-color);
     opacity: 0;
+    transform: translateX(2px);
     transition: opacity 0.3s ease;
 }
 
-.typewriter.typing {
-    opacity: 1;
-    border-right-color: var(--primary-color); /* 打字时显示光标 */
-}
-
-.typewriter.completed {
-    opacity: 1;
-    border-right-color: transparent; /* 完成后隐藏光标 */
-}
-
 .typewriter.typing::after {
-    content: '';
-    animation: blink 0.7s infinite;
+    opacity: 1;
+    animation: cursor-blink 0.7s steps(2) infinite;
 }
 
-@keyframes blink {
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
 </style>
@@ -270,22 +264,29 @@ class Typewriter {
         this.delay = options.delay || 50;
         this.startDelay = options.startDelay || 0;
         this.onComplete = options.onComplete;
-        this.cursor = options.cursor !== false;
         this.currentChar = 0;
+        this._frame = null;
     }
 
     start() {
         this.element.classList.add('typing');
-        setTimeout(() => this.type(), this.startDelay);
+        this._scheduleNextFrame(this.startDelay);
+    }
+
+    _scheduleNextFrame(delay) {
+        this._frame = requestAnimationFrame(() => {
+            setTimeout(() => this.type(), delay);
+        });
     }
 
     type() {
         if (this.currentChar < this.text.length) {
             this.element.textContent = this.text.slice(0, ++this.currentChar);
-            setTimeout(() => this.type(), this.delay);
+            this._scheduleNextFrame(this.delay);
         } else {
             this.element.classList.remove('typing');
-            this.element.classList.add('completed'); // 添加完成状态类
+            this.element.classList.add('completed');
+            cancelAnimationFrame(this._frame);
             if (this.onComplete) {
                 this.onComplete();
             }
@@ -298,88 +299,88 @@ document.addEventListener('DOMContentLoaded', () => {
     const contents = {
         '.welcome-title': {
             text: '欢迎来到千虑者的博客',
-            delay: 100
+            delay: 30
         },
         '.intro-text': {
             text: '这是一个专注于技术分享和学习记录的个人博客。主要关注：',
-            delay: 50,
-            startDelay: 1000
+            delay: 20,
+            startDelay: 300
         },
         '.feature-item:nth-child(1) h3': {
             text: '技术探索',
-            startDelay: 2000
+            startDelay: 600
         },
         '.feature-item:nth-child(1) p': {
             text: '深入研究 Rust、WebAssembly、系统编程等领域的技术实践',
-            startDelay: 2500
+            startDelay: 800
         },
         '.feature-item:nth-child(2) h3': {
             text: '工程实践',
-            startDelay: 3000
+            startDelay: 1000
         },
         '.feature-item:nth-child(2) p': {
             text: '分享软件开发中的最佳实践、架构设计和性能优化经验',
-            startDelay: 3500
+            startDelay: 1200
         },
         '.feature-item:nth-child(3) h3': {
             text: '学习笔记',
-            startDelay: 4000
+            startDelay: 1400
         },
         '.feature-item:nth-child(3) p': {
             text: '记录技术书籍阅读心得和学习过程中的思考总结',
-            startDelay: 4500
+            startDelay: 1600
         },
         '.feature-item:nth-child(4) h3': {
             text: '项目实战',
-            startDelay: 5000
+            startDelay: 1800
         },
         '.feature-item:nth-child(4) p': {
             text: '展示个人开源项目和有趣的技术实验',
-            startDelay: 5500
+            startDelay: 2000
         },
         '.blog-description p:nth-child(1)': {
             text: '博客名「千虑者」源于"智者千虑必有一失，愚者千虑必有一得"，寓意在技术探索的道路上保持开放和谦逊的心态。',
-            startDelay: 6000
+            startDelay: 3000
         },
         '.blog-description p:nth-child(2)': {
             text: '通过写作和分享，记录技术成长的点滴，也希望能为开发者社区贡献一份力量。',
-            startDelay: 6500
+            startDelay: 3500
         },
         '.blog-features h2': {
             text: '博客特点',
-            startDelay: 7000
+            startDelay: 3500
         },
         '.blog-features .feature-card:nth-child(1) h3': {
             text: '高性能',
-            startDelay: 7200
+            startDelay: 3200
         },
         '.blog-features .feature-card:nth-child(1) p': {
             text: '基于 Zola 静态站点生成器，快速加载，极致体验',
-            startDelay: 7400
+            startDelay: 3400
         },
         '.blog-features .feature-card:nth-child(2) h3': {
             text: '全文搜索',
-            startDelay: 7600
+            startDelay: 3600
         },
         '.blog-features .feature-card:nth-child(2) p': {
             text: '基于 Rust 实现的高性能全文搜索功能',
-            startDelay: 7800
+            startDelay: 3800
         },
         '.blog-features .feature-card:nth-child(3) h3': {
             text: '响应式设计',
-            startDelay: 8000
+            startDelay: 3000
         },
         '.blog-features .feature-card:nth-child(3) p': {
             text: '完美适配各种设备，提供最佳阅读体验',
-            startDelay: 8200
+            startDelay: 3200
         },
         '.blog-features .feature-card:nth-child(4) h3': {
             text: '优雅排版',
-            startDelay: 8400
+            startDelay: 3400
         },
         '.blog-features .feature-card:nth-child(4) p': {
             text: '精心设计的版式和配色，让阅读更加舒适',
-            startDelay: 8600
+            startDelay: 3600
         }
     };
 
@@ -420,4 +421,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-{% endblock content %} 
+{% endblock content %}

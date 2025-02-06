@@ -41,7 +41,7 @@
     margin: 1.5em 0;
     padding: 1em;
     overflow-x: auto;
-    background: var(--code-block-bg);
+    background: var(--code-bg);
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
@@ -52,7 +52,7 @@
     font-size: 0.9em;
     line-height: 1.5;
     background: none;
-    color: var(--code-block-color);
+    color: var(--code-color);
     border-radius: 0;
 }
 
@@ -179,25 +179,5 @@
     --table-stripe-bg: #f9fafb;
 }
 
-/* 暗色主题支持 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --code-bg: #2d2d2d;
-        --code-color: #e2e8f0;
-        --code-block-bg: #2d2d2d;
-        --code-block-color: #e2e8f0;
-        --code-lang-bg: rgba(255, 255, 255, 0.1);
-        --code-lang-color: #e2e8f0;
-        
-        /* 暗色主题链接样式 */
-        --link-color: #63b3ed;
-        --link-hover-color: #90cdf4;
-        --link-border-color: rgba(99, 179, 237, 0.2);
-        
-        --quote-bg: rgba(255, 255, 255, 0.05);
-        --quote-color: #94a3b8;
-        --table-header-bg: rgba(255, 255, 255, 0.05);
-        --table-stripe-bg: rgba(255, 255, 255, 0.02);
-    }
-}
-</style> 
+
+</style>
